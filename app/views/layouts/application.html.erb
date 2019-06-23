@@ -11,14 +11,24 @@
 
   <body>
     <header id="main_navigation" class="clearfix">
-      <a href="#" class="name">Emekchi</a>
+      <%= link_to image_tag("logo.png", alt: "logo"), root_path, class: "navbar-brand" %>
+
+    
       <nav>
         <%= link_to "Articles", posts_path %>
         <a href="#">Projects</a>
         <a href="#">Contact</a>
       </nav>
     </header>
-    
+
     <%= yield %>
+    <footer id="main_footer">
+        <p class="copyright">&copy;2019 Kayhan Ayas</p>
+        <nav>
+          <a href="http://twitter.com/akdady" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.instagram.com/kyhnayas/" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.facebook.com/kyhnayas" target="_blank"><i class="fa fa-facebook"></i></a>
+        </nav>
+    </footer>
   </body>
 </html>

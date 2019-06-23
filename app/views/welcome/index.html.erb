@@ -1,0 +1,25 @@
+<div class="wrapper wrapper_padding clearfix">
+  <div class="col-1 about homepage_content">
+    <h2>Hakkımda</h2>
+    <hr>
+    <p>Selam ben grafik tasarım, web develop ve 3d artistim. istanbul, Türkiyede yaşıyorum</p>
+    <p>bana <a href="https://www.facebook.com/kyhnayas" target="_blank">Facebook</a>, <a href="https://www.instagram.com/kyhnayas/" target="_blank">instagram</a> ve <a href="http://twitter.com/akdady" target="_blank">Twitter</a>dan ulaşabilirsiniz.</p>
+  </div>
+  <div class="col-2 homepage_content">
+    <h2>Paylaşımlar</h2>
+    <hr>
+    <% @posts.each do |post| %>
+    <h3><a href="#"><%= link_to post.title, post %></a></h3>
+    <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+    <% end %>
+
+  </div>
+  <div class="col-3 homepage_content">
+    <h2>Hedefimiz</h2>
+    <hr>
+    <h3>İş istihdamı oluşturmak</h3>
+    <h3>işin ehline ulaşabilmeniz.</h3>
+    <h3>Piyasa fiyatlarının belirlenmesi ve faiş, düşük fiyatlandırmaların düzenlenmesi.</h3>
+
+  </div>
+</div>
